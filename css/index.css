@@ -1,0 +1,164 @@
+body{
+  background-image: url("../assets/images/web\ yellow\ background\ [Recovered]-01-01.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom ;
+    overflow-x: hidden;
+}
+  /* .outline-thick{
+    border: var(--primary) 8px solid;
+    border-radius: 21px;
+  }
+  .outline-thick img{
+    border-radius: 10px;
+  }  */
+  section{
+    text-align: center;
+  }
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    text-align: center;
+    transition: .5s ease;
+    border-radius: 13px;
+    background-color: var(--secondary);
+  }
+  .col:hover .img-overlay{
+    opacity: 1;
+  }
+  .landing-section{
+    height: 100vh;
+    background-image: url("../assets/bg/web-homepage.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .logo{
+    max-width: 20%;
+    max-height: 20%;
+    
+    text-align: center;
+  }
+  .logo-artist{
+    margin-bottom: 2%;
+  }
+  .logo-gallery{
+    margin-top: 3%;
+  }
+  
+  @media only screen and (max-width: 440px) {
+  .landing-section {
+    height: 100vh;
+    /* background-image: url("../assets/images/mobile logos-01.webp"),url("../assets/images/home page mobile-01.webp"); */
+    background-image:url("../assets/bg/mobile-homepage.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y:top;
+  }
+}
+
+@media (max-width: 1000px){
+  body{
+    background-image: url("../assets/images/yellow\ background\ mobile-01.png");
+	  background-repeat: repeat-y;
+	  background-size: cover;
+	  background-attachment: fixed;
+	  background-position-y: bottom ;
+  }
+  .logo{
+    max-width: 65%;
+    padding-top: 5%;
+  }
+}
+
+.layer-1{
+  z-index: 1;
+  position: absolute;
+  left:0vw;
+  width: 100vw;
+}
+.layer-2{
+  z-index: 2;
+  position: absolute;
+  left:0vw;
+  width: 100vw;
+}
+
+
+.monument-one{
+  animation: monument-one 10s linear;
+  animation-iteration-count: infinite;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom:0;
+}
+.monument-two{
+  animation: monument-two 10s linear;
+  animation-iteration-count: infinite;
+  width: 100vw;
+  position: absolute;
+  left: -100vw;
+  bottom:0;
+}
+
+@keyframes monument-one {
+  from{
+    left:0;
+  }
+  to{
+    left: 100vw;
+  }
+}
+@keyframes monument-two {
+  from{
+    left:-100vw;
+  }
+  to{
+    left: 0vw;
+  }
+}
+
+.balloons{
+  animation: fly-up 20s linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  bottom: -50vh;
+  height: fit-content;
+}
+
+@keyframes fly-up {
+  0%{
+    bottom: -70vh;
+  }
+  20%{
+    bottom: 0vh;
+  }
+  32%{
+    bottom: -10vh;
+  }
+  44%{
+    bottom: 0vh;
+  }
+  56%{
+    bottom: -10vh;
+  }
+  68%{
+    bottom: 0vh;
+  }
+  80%{
+    bottom: -10vh;
+  }
+  100%{
+    bottom: 100vh;
+  }
+}
